@@ -1,0 +1,111 @@
+:root {
+	--primary-text-color: #B9C3C8;
+	--primary-title-color: #282828;
+	--secondary-title-color: #ffffff;
+
+	--accent-color: #00D7FF;
+
+	--header-bg-color: #242A37;
+	--header-secondary-color: #3E4E6C;
+
+	--primary-bg-color: #F2F3F7;
+
+	--bg-card-color: #ffffff;
+	--fctive-card-color: #15395A;
+}
+
+/* 
+
+кружок normal #24D40C
+кружок hard #DB0837
+
+лейба work #D3F6CE
+лейба stuff #B9C3C8
+лейба family #FFE6D3
+лейба health #CDF7FF
+лейба learning #FFF6C0
+лейба leisure #F8D2FF
+
+кнопка добавить #FF851C
+
+*/
+
+body {
+	font-family: 'HelveticaNeueCyr', sans-serif;
+	color: var(--primary-text-color)
+}
+
+.link {
+	text-decoration: none;
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.header-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	background-color: var(--header-bg-color);
+}
+
+.info-right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-weight: 700;
+font-size: 18px;
+line-height: 1;
+letter-spacing: 0.02em;
+
+	color: var(--accent-color);
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--header-secondary-color);
+
+	margin-right: 10px;
+}
+
+.first-letter {
+	font-weight: 900;
+font-size: 17px;
+line-height: calc(16 / 17);
+letter-spacing: 0.02em;
+
+color: var(--secondary-title-color);
+}
+
+.challenge-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--accent-color);
+
+	margin-right: 10px;
+}
+
+.challenge-icon {
+	fill: var(--header-bg-color);
+}
+
+.logout-icon {
+	fill: var(--header-secondary-color);
+}
