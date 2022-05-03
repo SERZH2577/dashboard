@@ -11,9 +11,14 @@
 
 </head>
 <body>
+
+<!-- =============== HEADER =============== -->
+
 	<header class="header">
 		<section class="header-section">
-<a href="" class="logo link">Questify</a>
+<a href="" class="logo link">
+	<h1 class="logo-title">Questify</h1>
+</a>
 <div class="info-right">
 <div class="avatar"><span class="first-letter">J</span></div>
 <p hidden class="name">John’s Quest Log</p>
@@ -33,8 +38,45 @@
 		</section>
 	</header>
 
-	<main>
+	<main class="main">
+<section class="today container">
+	<h2 class="today-title">Today</h2>
 
+	<ul class="today-list list">
+		<li class="today-item">
+			<div class="card">
+				<div class="split">
+					<div class="card-headr">
+						<div class="card-headr-level">
+							<svg width="10" height="10" class="card-headr-level-icon">
+								<use href="./images/symbol-defs.svg#icon-ellipse"></use>
+							</svg>
+							<p class="card-headr-level-text">Easy</p>
+						</div>
+						<svg width="19" height="19" class="card-headr-star-icon">
+							<use href="./images/symbol-defs.svg#icon-star"></use>
+						</svg>
+					</div>
+
+					<div class="card-task">
+						<p class="card-task-text">Submit report</p>
+						<div class="card-task-date">
+							<p class="card-task-date-text">Today, 7:30</p>
+							<svg width="12" height="18" class="card-task-date-icon">
+								<use href="./images/symbol-defs.svg#icon-fire"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-group">
+					<p class="card-group-text">Work</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+</section>
 	</main>
 
 	<footer>

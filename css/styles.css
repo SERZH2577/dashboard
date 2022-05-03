@@ -4,6 +4,7 @@
 	--secondary-title-color: #ffffff;
 
 	--accent-color: #00D7FF;
+	--accent-secondary-color: #FF851C;
 
 	--header-bg-color: #242A37;
 	--header-secondary-color: #3E4E6C;
@@ -12,37 +13,50 @@
 
 	--bg-card-color: #ffffff;
 	--fctive-card-color: #15395A;
+
+	--easy-level-color:  #00D7FF;
+	--normal-level-color: #24D40C;
+	--hard-level-color:  #DB0837;
+
+	--work-group-color:  #D3F6CE;
+	--stuff-group-color:  #B9C3C8;
+	--family-group-color:  #FFE6D3;
+	--health-group-color:  #CDF7FF;
+	--learning-group-color:  #FFF6C0;
+	--leisure-group-color:  #F8D2FF;
 }
 
-/* 
-
-кружок normal #24D40C
-кружок hard #DB0837
-
-лейба work #D3F6CE
-лейба stuff #B9C3C8
-лейба family #FFE6D3
-лейба health #CDF7FF
-лейба learning #FFF6C0
-лейба leisure #F8D2FF
-
-кнопка добавить #FF851C
-
-*/
+* {
+  box-sizing: border-box;
+}
 
 body {
 	font-family: 'HelveticaNeueCyr', sans-serif;
-	color: var(--primary-text-color)
+	color: var(--primary-text-color);
+
+	background-color: var(--primary-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
 }
 
 .link {
 	text-decoration: none;
 }
 
-.container {
-	padding-left: 15px;
-	padding-right: 15px;
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
+
+.container {
+	padding: 25px 15px 15px 15px;
+}
+
+/* =============== HEADER =============== */
 
 .header-section {
 	display: flex;
@@ -59,12 +73,14 @@ body {
 }
 
 .logo {
-	font-weight: 700;
-font-size: 18px;
-line-height: 1;
-letter-spacing: 0.02em;
-
 	color: var(--accent-color);
+}
+
+.logo-title {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.02em;
 }
 
 .avatar {
@@ -89,6 +105,10 @@ letter-spacing: 0.02em;
 color: var(--secondary-title-color);
 }
 
+.challenge {
+	margin-right: 10px;
+}
+
 .challenge-bg {
 	display: flex;
 	justify-content: center;
@@ -98,8 +118,11 @@ color: var(--secondary-title-color);
 	height: 30px;
 	border-radius: 50%;
 	background-color: var(--accent-color);
+	box-shadow:0 0 7px var(--accent-color);
+}
 
-	margin-right: 10px;
+.challenge-bg:hover, .challenge-bg:focus {
+box-shadow:0 0 8px var(--accent-color);
 }
 
 .challenge-icon {
@@ -109,3 +132,144 @@ color: var(--secondary-title-color);
 .logout-icon {
 	fill: var(--header-secondary-color);
 }
+
+/* =============== MAIN =============== */
+
+.today-title {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1;
+	letter-spacing: 0.02em;
+
+	color: var(--primary-title-color);
+}
+
+/* =============== CADR =============== */
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+
+	min-height: 260px;
+
+	background: var(--bg-card-color);
+	box-shadow: -3px -4px 4px rgba(21, 57, 90, 0.03), 3px 4px 4px rgba(21, 57, 90, 0.03);
+	border-radius: 10px;
+
+	margin-top: 20px;
+	padding: 20px 20px 35px 20px;
+}
+
+.card:hover {
+	box-shadow: -3px 0px 5px rgba(21, 57, 90, 0.08), 3px 5px 5px rgba(21, 57, 90, 0.08);
+}
+
+.split {
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+align-content: flex-start;
+}
+
+.card-headr {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	width: 100%;
+	/* height: 100%; */
+}
+
+.card-headr-level {
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+}
+
+.card-headr-level-icon {
+	margin-right: 10px;
+	fill: var(--easy-level-color);
+}
+
+.card-headr-level-text {
+	font-size: 16px;
+	line-height: 1;
+	letter-spacing: 0.02em;
+
+	margin: 0;
+}
+
+.card-headr-star-icon {
+	filter: drop-shadow(0px 3px 4px rgba(0, 215, 255, 0.25));
+	
+	fill: var(--accent-color);
+}
+
+.card-task {
+	width: 100%;
+
+	margin-top: 70px;
+	padding-bottom: 15px;
+}
+
+.card-task-text {
+	text-align: center;
+	margin: 0;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1;
+
+	color: var(--primary-title-color);
+}
+
+.card-task-date {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 8px;
+}
+
+.card-task-date-text {
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.02em;
+
+	margin: 0;
+}
+
+.card-task-date-icon {
+	fill: var(--accent-secondary-color);
+	margin-left: 7px;
+}
+
+.card-group {
+	display: flex;
+	align-items: center;
+
+	width: 120px;
+	height: 35px;
+	margin-top: auto;
+	margin-left: -20px;
+	padding-left: 20px;
+	border-radius: 0px 25px 25px 0px;
+	
+	background-color: var(--work-group-color);
+
+	
+}
+
+.card-group-text {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 0.02em;
+
+	color: var(--primary-title-color);
+
+	margin: 0;
+}
+
+
